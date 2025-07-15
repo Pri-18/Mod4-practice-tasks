@@ -1,0 +1,18 @@
+<?php
+function basic_page_custom_theme($existing, $theme, $type, $path) {
+    return [
+        'information_page' => [
+            'variables' => [
+                'data' => [],
+                'title' => '',
+            ],
+        ],
+    ];
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function basic_page_custom_user_login(Drupal\Core\Session\AccountInterface $account) {
+  \Drupal::service('session')->set('custom_login_redirect', TRUE);
+}
