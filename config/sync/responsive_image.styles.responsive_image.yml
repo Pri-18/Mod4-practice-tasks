@@ -1,0 +1,19 @@
+uuid: 14c8d048-3627-4e70-baad-a5957248a750
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.max_325x325
+  theme:
+    - olivero
+id: responsive_image
+label: responsive_image
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: max_325x325
+    breakpoint_id: olivero.grid-md
+    multiplier: 1x
+breakpoint_group: olivero
+fallback_image_style: large

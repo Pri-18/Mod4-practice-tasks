@@ -1,0 +1,31 @@
+uuid: a15026b6-2273-41d6-81e6-b418907b887c
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.demo_contrib_conditional_fields
+  module:
+    - system
+    - webform
+  theme:
+    - olivero
+id: olivero_webform
+theme: olivero
+region: content_above
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: visible
+  provider: webform
+  webform_id: demo_contrib_conditional_fields
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/forms\r\n"

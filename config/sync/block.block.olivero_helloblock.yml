@@ -1,0 +1,25 @@
+uuid: c952255d-2adc-47a7-bb4c-6f2189a073a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_page_custom
+    - system
+  theme:
+    - olivero
+id: olivero_helloblock
+theme: olivero
+region: content_above
+weight: 0
+provider: null
+plugin: hello_block
+settings:
+  id: hello_block
+  label: 'Hello Block'
+  label_display: visible
+  provider: basic_page_custom
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node
