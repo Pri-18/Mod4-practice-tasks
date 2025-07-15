@@ -1,0 +1,8 @@
+
+priyanshu.example:
+  path: '/priyanshu/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\priyanshu\Controller\PriyanshuController'
+  requirements:
+    _permission: 'access content'

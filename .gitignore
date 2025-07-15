@@ -60,4 +60,4 @@
 node_modules/
 
 # keeping aside  all the modules 
-/web/modules/
+/web/modules/custom/
