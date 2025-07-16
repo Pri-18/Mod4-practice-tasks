@@ -107,6 +107,7 @@ class SettingsForm extends ConfigFormBase {
         $form_state->setErrorByName('email', $this->t('Only .com email addresses are allowed.'));
     }
 
+    //email validation 4 --> Check if the email valid or not.
     try {
        $apiKey = $_ENV['API_KEY'] ?? '';
        $url = "http://apilayer.net/api/check?access_key=$apiKey&email=" . urlencode($email);
@@ -117,7 +118,6 @@ class SettingsForm extends ConfigFormBase {
        } else {
          $result = json_decode($response, true);
 
-         // You can check various fields based on the API's response format
          if (isset($result['format_valid']) && !$result['format_valid']) {
            $form_state->setErrorByName('contact_email', $this->t('The email format is not valid according to the API.'));
          }
