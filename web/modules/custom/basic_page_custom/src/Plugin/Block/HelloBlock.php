@@ -6,7 +6,7 @@ use Drupal\Core\Block\BlockBase;
 
 
 /**
- * Provides a 'Hello Priyansu' Block.
+ * Provides a 'Hello world' Block.
  *
  * @Block(
  *   id = "hello_block",

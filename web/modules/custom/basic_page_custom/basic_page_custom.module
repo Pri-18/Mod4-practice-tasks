@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Implements hook_theme().
+ */
 function basic_page_custom_theme($existing, $theme, $type, $path) {
     return [
         'information_page' => [
