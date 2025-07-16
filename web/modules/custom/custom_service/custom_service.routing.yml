@@ -1,0 +1,7 @@
+custom_service.greeting:
+  path: '/greeting'
+  defaults:
+    _controller: 'Drupal\custom_service\Controller\GreetController::greet'
+    _title: 'Greeting Page'
+  requirements:
+    _permission: 'access content'

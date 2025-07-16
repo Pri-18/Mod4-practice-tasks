@@ -1,0 +1,25 @@
+alter_route.node:
+  path: '/alter/node/{nodeId}'
+  defaults:
+    _controller: 'Drupal\alter_route\Controller\Alter_routeController::node'
+    _title: 'Node ID Page'
+  requirements:
+    _permission: 'access content'
+    # nodeId: \d+
+  
+alter_route.restricted_page:
+  path: '/restricted_page'
+  defaults:
+    _controller: 'Drupal\alter_route\Controller\RestrictedController::restrictedPage'
+    _title: Demo restricted Page
+  requirements:
+    _custom_access: 'Drupal\alter_route\Controller\RestrictedController::access'
+    
+    
+# alter_route.restricted_page:
+#   path: '/restricted_page'
+#   defaults:
+#     _controller: 'Drupal\alter_route\Controller\RestrictedController::restrictedPage'
+#     _title: Demo restricted Page
+#   requirements:
+#     _role: administrator + content_editor
