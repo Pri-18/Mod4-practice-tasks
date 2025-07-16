@@ -16,10 +16,10 @@ alter_route.restricted_page:
     _custom_access: 'Drupal\alter_route\Controller\RestrictedController::access'
     
     
-# alter_route.restricted_page:
-#   path: '/restricted_page'
-#   defaults:
-#     _controller: 'Drupal\alter_route\Controller\RestrictedController::restrictedPage'
-#     _title: Demo restricted Page
-#   requirements:
-#     _role: administrator + content_editor
+alter_route.restricted_page:
+  path: '/restricted_page'
+  defaults:
+    _controller: 'Drupal\alter_route\Controller\RestrictedController::restrictedPage'
+    _title: Demo restricted Page
+  requirements:
+    _role: administrator + content_editor
