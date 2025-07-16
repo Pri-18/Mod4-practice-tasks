@@ -39,7 +39,7 @@ class AjaxForm extends FormBase {
         ];
 
         $form['actions'] = [
-            '#type' => 'button',
+            '#type' => 'submit',
             '#value' => $this->t('Calculate'),
             '#ajax' => [
                 'callback' => '::setMessage'
