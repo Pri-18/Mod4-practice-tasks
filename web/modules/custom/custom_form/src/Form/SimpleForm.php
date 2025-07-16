@@ -1,28 +1,46 @@
 <?php
 namespace Drupal\custom_form\Form;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\MessengerInterface;
 
 /**
  * Simple form class
  */
 class SimpleForm extends FormBase {
 
+    protected $messenger;
+
+    /**
+     * To construct the dependency injection
+     * @param \Drupal\Core\Messenger\MessengerInterface $messenger
+     */
+    public function __construct(MessengerInterface $messenger) {
+        $this->messenger = $messenger;
+    }
+
+    /**
+     * Factory method for dependency injection.
+     * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+     * 
+     * @return static
+     */
+    public static function create(ContainerInterface $container) {
+        return new static (
+            $container->get('messenger')
+        );
+    }
+
     /**
      * {@inheritDoc}
-     * @return string
      */
     public function getFormId(){
         return 'custom_simple_form';
     }
 
     /**
-     * function to  build the Form
-     * @param array $form
-     * @param \Drupal\Core\Form\FormStateInterface $form_state
      * {@inheritDoc}
-     * 
-     * @return array
      */
     public function buildForm(array $form, FormStateInterface $form_state){
         $form['name'] = [
@@ -44,10 +62,17 @@ class SimpleForm extends FormBase {
         return $form;
     }
 
+    /**
+     * TO submit the form.
+     * @param array $form
+     * @param \Drupal\Core\Form\FormStateInterface $form_state
+     * 
+     * @return void
+     */
     public function submitForm(array &$form, FormStateInterface $form_state){
-        \Drupal::messenger()->addMessage('Hello' . $form_state->getValue('name'));
-        \Drupal::messenger()->addMessage('Your email -> ' . $form_state->getValue('email'));
-        \Drupal::messenger()->addMessage('YYour response is submitted');
+        $this->messenger->addMessage('Hello' . $form_state->getValue('name'));
+        $this->messenger->addMessage('Your email -> ' . $form_state->getValue('email'));
+        $this->messenger->addMessage('YYour response is submitted');
     }
 
 }

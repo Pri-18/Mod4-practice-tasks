@@ -1,17 +1,26 @@
 <?php
-namespace Drupal\custom_form\Form;
 
+namespace Drupal\custom_form\Form;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * Provides A form 
+ */
 class AjaxForm extends FormBase {
 
+    /**
+     * {@inheritDoc}
+     */
     public function getFormId(){
         return 'ajax_form';
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(array $form, FormStateInterface $form_state){
 
         $form['msg'] = [
@@ -35,11 +44,18 @@ class AjaxForm extends FormBase {
             '#ajax' => [
                 'callback' => '::setMessage'
             ]
-            ];
+        ];
 
         return $form;
     }
 
+    /**
+     * Provodie the response.
+     * @param array $form
+     * @param \Drupal\Core\Form\FormStateInterface $form_state
+     * 
+     * @return AjaxResponse
+     */
     public function setMessage(array &$form, FormStateInterface $form_state) {
         $res = new AjaxResponse();
         $res-> addCommand(

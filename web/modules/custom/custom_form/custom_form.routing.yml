@@ -16,7 +16,7 @@ custom_form.settings_form:
     _permission: 'administer site configuration'
 
 custom_form.ajax_form:
-  path: '/AjaxForm'
+  path: '/ajaxForm'
   defaults:
     _form: '\Drupal\custom_form\Form\AjaxForm'
     _title: 'Custom Ajax Form'

@@ -9,7 +9,6 @@ class SettingsForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
-   * The config object this form edits.
    */
   protected function getEditableConfigNames(): array {
     return ['custom_form.settings'];
@@ -17,7 +16,6 @@ class SettingsForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
-   * The unique form ID.
    */
   public function getFormId(): string {
     return 'custom_form_settings';
