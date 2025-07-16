@@ -5,7 +5,7 @@ alter_route.node:
     _title: 'Node ID Page'
   requirements:
     _permission: 'access content'
-    # nodeId: \d+
+    nodeId: \d+
   
 alter_route.restricted_page:
   path: '/restricted_page'

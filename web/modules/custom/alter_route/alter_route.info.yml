@@ -1,7 +1,6 @@
 name: Router alter
 description: To alter the routes 
 package: Custom
-
 type: module
 version: 10.x
 core_version_requirement: ^10.3 || ^11
