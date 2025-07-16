@@ -10,10 +10,10 @@ services:
       - { name: access_check } 
   
 
-  # alter for static roles
-  # route_alter.RestrictedPageAlter:
-  #   class: Drupal\alter_route\Routing\RestrictedPageAlter
-  #   tags:
-  #     - { name: event_subscriber }
+  alter for static roles
+  route_alter.RestrictedPageAlter:
+    class: Drupal\alter_route\Routing\RestrictedPageAlter
+    tags:
+      - { name: event_subscriber }
 
   
