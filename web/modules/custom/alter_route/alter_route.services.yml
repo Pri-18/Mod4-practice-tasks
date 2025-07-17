@@ -1,0 +1,19 @@
+services: 
+  route_alter.RouteAlter:
+    class: Drupal\alter_route\Routing\RouteAlter
+    tags:
+      - { name: event_subscriber }
+    
+  route_alter.RestrictedPageAlter:
+    class: Drupal\alter_route\Routing\RestrictedPageAlter
+    tags:
+      - { name: access_check } 
+  
+
+  alter for static roles
+  route_alter.RestrictedPageAlter:
+    class: Drupal\alter_route\Routing\RestrictedPageAlter
+    tags:
+      - { name: event_subscriber }
+
+  
