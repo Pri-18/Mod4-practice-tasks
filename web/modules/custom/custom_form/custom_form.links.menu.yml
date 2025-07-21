@@ -1,0 +1,22 @@
+custom_form.settings:
+  title: 'Custom Settings'
+  description: 'Set site contact email and welcome message.'
+  route_name: custom_form.settings_form
+  parent: system.admin_config_system
+  weight: 100
+
+custom_form.simple_form:
+  title: 'Generic form'
+  description: 'Custom generic.'
+  route_name: custom_form.simple_form
+  menu_name: main
+  weight: 100
+
+custom_form.ajax_form:
+  title: 'Ajax form'
+  description: 'Custom ajax form'
+  route_name: custom_form.ajax_form
+  menu_name: main
+  weight: 100
+  
+

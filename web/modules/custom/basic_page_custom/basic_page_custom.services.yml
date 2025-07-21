@@ -1,0 +1,9 @@
+services:
+  basic_page_custom.login_redirect_subscriber:
+    class: Drupal\basic_page_custom\EventSubscriber\LoginRedirectSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  basic_page_custom.hello_service:
+    class: Drupal\basic_page_custom\Service\LoadData
+    arguments: ['@database']

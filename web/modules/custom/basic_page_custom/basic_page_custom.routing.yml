@@ -1,0 +1,23 @@
+basic_page_custom.basicPage:
+  path: '/basic-page-custom'
+  defaults:
+    _controller: '\Drupal\basic_page_custom\Controller\BasicPageCustomController::basicPage'
+  requirements:
+    _permission: 'custom permission'
+    
+    
+basic_page_custom.infoPage:
+  path: '/basic-page-custom-info'
+  defaults:
+    _controller: '\Drupal\basic_page_custom\Controller\BasicPageCustomController::infoPage'
+  requirements:
+    _role: administrator + anonymous
+    
+    
+basic_page_custom.welcomePage:
+  path: '/custom-welcome-page'
+  defaults:
+    _controller: '\Drupal\basic_page_custom\Controller\BasicPageCustomController::welcomePage'
+  requirements:
+    _role: authenticated
+    

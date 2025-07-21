@@ -1,0 +1,5 @@
+services:
+  custom_service.greeting_service:
+    class: Drupal\custom_service\Service\GreetingService
+    arguments: ['@current_user']
+    
