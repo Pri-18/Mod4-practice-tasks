@@ -1,0 +1,21 @@
+uuid: 4e30f03d-ce7c-41bf-a63d-7123ab2e6ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_picker_test
+    - node.type.color_picker_test
+  module:
+    - rgb_color_picker
+id: node.color_picker_test.field_picker_test
+field_name: field_picker_test
+entity_type: node
+bundle: color_picker_test
+label: picker_test
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: rgb_color

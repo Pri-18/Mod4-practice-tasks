@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_article_ref
     - field.field.node.page.field_basic_img
+    - field.field.node.page.field_color
     - field.field.node.page.field_meta_tags
     - image.style.thumbnail
     - node.type.page
@@ -14,6 +15,7 @@ dependencies:
     - inline_entity_form
     - metatag
     - path
+    - rgb_color_picker
     - text
 _core:
   default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
@@ -63,6 +65,12 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_color:
+    type: rgb_hex_widget
+    weight: 124
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose

@@ -1,0 +1,28 @@
+uuid: b4968e3f-0be0-4fd4-a1bc-3b230f4ef02a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.color_test.field_color_test
+    - node.type.color_test
+  module:
+    - rgb_color_picker
+    - user
+id: node.color_test.default
+targetEntityType: node
+bundle: color_test
+mode: default
+content:
+  field_color_test:
+    type: color_swatch_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

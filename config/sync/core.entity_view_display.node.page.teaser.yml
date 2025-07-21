@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_article_ref
     - field.field.node.page.field_basic_img
+    - field.field.node.page.field_color
     - field.field.node.page.field_meta_tags
     - node.type.page
   module:
@@ -33,4 +34,5 @@ content:
 hidden:
   field_article_ref: true
   field_basic_img: true
+  field_color: true
   field_meta_tags: true

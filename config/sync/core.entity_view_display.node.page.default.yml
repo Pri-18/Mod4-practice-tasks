@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_article_ref
     - field.field.node.page.field_basic_img
+    - field.field.node.page.field_color
     - field.field.node.page.field_meta_tags
     - node.type.page
   module:
@@ -13,6 +14,7 @@ dependencies:
     - layout_builder
     - layout_discovery
     - metatag
+    - rgb_color_picker
     - text
     - user
 third_party_settings:
@@ -100,6 +102,21 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 4
             additional: {  }
+          b57a3571-0bfb-489f-9d8b-c99db2a674dd:
+            uuid: b57a3571-0bfb-489f-9d8b-c99db2a674dd
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_color'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: rgb_text_formatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
@@ -133,6 +150,13 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_color:
+    type: rgb_text_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
