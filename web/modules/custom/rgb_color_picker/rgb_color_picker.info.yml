@@ -1,0 +1,8 @@
+name: rgb color picker
+type: module
+description: Provides a custom field type for RGB colors with multiple widgets and formatters.
+version: 10.x
+core_version_requirement: ^10.3 || ^11
+package: custom 
+dependencies:
+  - field
