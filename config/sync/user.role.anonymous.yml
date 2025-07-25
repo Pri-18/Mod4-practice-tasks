@@ -7,6 +7,7 @@ dependencies:
   module:
     - comment
     - contact
+    - custom_entity
     - filter
     - search
     - system
@@ -21,4 +22,5 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
+  - update_movie
   - 'use text format restricted_html'
