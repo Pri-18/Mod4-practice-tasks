@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.article
-    - node.type.color_picker_test
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
@@ -30,7 +29,6 @@ permissions:
   - 'access toolbar'
   - 'administer url aliases'
   - 'create article content'
-  - 'create color_picker_test content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
@@ -39,7 +37,6 @@ permissions:
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
-  - 'edit any color_picker_test content'
   - 'edit any page content'
   - 'edit own article content'
   - 'edit own comments'
