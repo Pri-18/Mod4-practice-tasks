@@ -1,0 +1,10 @@
+name: Movie
+type: module
+description: 'Custom module for testing movie entity'
+package: custom
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - field
+  - text
+  - image

@@ -1,0 +1,6 @@
+custom_entity.admin:
+  title: 'Award winning movies'
+  description: 'Manage custom entities'
+  parent: system.admin_structure
+  route_name: entity.award_movie.collection
+  weight: 0

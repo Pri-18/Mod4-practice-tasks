@@ -1,0 +1,11 @@
+view_movie:
+  title: View Movie entities
+
+update_movie:
+  title: Edit the movie entities
+
+add_movie:
+  title: Edit the movie entities
+
+delete_movie:
+  title: Delete the movie entities
