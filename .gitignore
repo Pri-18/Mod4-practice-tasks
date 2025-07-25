@@ -60,5 +60,4 @@
 node_modules/
 
 # keeping aside  all the modules 
-/web/modules/custom/
 /web/modules/priyanshu
