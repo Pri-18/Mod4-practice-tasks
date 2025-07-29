@@ -1,0 +1,32 @@
+<?php
+
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_entity_view().
+ */
+function budget_form_entity_view(array &$build, Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'movie') {
+    $budget = \Drupal::config('budget_form.settings')->get('budget');
+    $price = $entity->get('field_budget')->value;
+
+    $status = '';
+    if ($price < $budget) {
+      $status = 'The movie is under budget';
+    }
+    elseif ($price > $budget) {
+      $status = 'The movie is over budget';
+    }
+    else {
+      $status = 'The movie is within budget';
+    }
+
+    // Display message at the top.
+    $build['budget_status'] = [
+      '#type' => 'markup',
+      '#markup' => Markup::create('<div style="background:#eef;padding:10px;margin-bottom:10px"><strong>' . $status . '</strong></div>'),
+      '#weight' => -10,
+    ];
+  }
+
+}

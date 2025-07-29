@@ -1,0 +1,6 @@
+name: budget_form
+description: This is a custom config form for movies.
+type: module
+package: custom
+version: 10.x
+core_version_requirement: ^10.3 || ^11
