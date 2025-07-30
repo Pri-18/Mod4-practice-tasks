@@ -1,0 +1,6 @@
+name: custom_form
+description: This is a custom generic and config form
+type: module
+package: Custom
+version: 10.x
+core_version_requirement: ^10.3 || ^11
