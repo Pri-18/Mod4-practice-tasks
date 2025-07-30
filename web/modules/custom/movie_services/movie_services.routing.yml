@@ -1,0 +1,7 @@
+budget_form.settings_form:
+  path: '/admin/config/system/budget-settings'
+  defaults:
+    _form: 'Drupal\movie_services\Form\BudgetForm'
+    _title: 'Budget Config Form'
+  requirements:
+    _permission: 'administer site configuration'
