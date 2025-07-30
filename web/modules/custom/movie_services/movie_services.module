@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains movie_services.module for custom movie event handling.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\movie_services\Event\CreateMovieEvent;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function movie_services_entity_insert(EntityInterface $entity): void {
+  // Only act on 'movie' content type nodes.
+  if ($entity instanceof NodeInterface && $entity->bundle() === 'movie') {
+    $event = new CreateMovieEvent($entity);
+    \Drupal::service('event_dispatcher')->dispatch($event, CreateMovieEvent::EVENT_NAME);
+  }
+
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function movie_services_entity_update(EntityInterface $entity): void {
+
+  if ($entity instanceof NodeInterface && $entity->bundle() === 'movie') {
+    $event = new CreateMovieEvent($entity);
+    \Drupal::service('event_dispatcher')->dispatch($event, CreateMovieEvent::EVENT_NAME2);
+  }
+
+}

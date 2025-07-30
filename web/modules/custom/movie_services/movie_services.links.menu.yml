@@ -1,0 +1,6 @@
+movie_services.settings:
+  title: 'Custom Budget form'
+  description: 'Set the budget of an user'
+  route_name: budget_form.settings_form
+  parent: system.admin_config_system
+  weight: 100

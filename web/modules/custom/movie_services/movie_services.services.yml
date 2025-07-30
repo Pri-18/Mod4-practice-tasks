@@ -1,0 +1,8 @@
+services:
+  movie_serives.event_subscriber:
+    class: Drupal\movie_services\EventSubscriber\CreateMovieSubscriber
+    arguments:
+      - '@config.factory'
+      - '@messenger'
+    tags:
+      - { name: event_subscriber }
