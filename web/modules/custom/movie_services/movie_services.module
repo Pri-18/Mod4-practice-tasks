@@ -16,7 +16,7 @@ function movie_services_entity_insert(EntityInterface $entity): void {
   // Only act on 'movie' content type nodes.
   if ($entity instanceof NodeInterface && $entity->bundle() === 'movie') {
     $event = new CreateMovieEvent($entity);
-    \Drupal::service('event_dispatcher')->dispatch($event, 'movie_services.movie_created');
+    \Drupal::service('event_dispatcher')->dispatch($event, CreateMovieEvent::EVENT_NAME);
   }
 
 }
@@ -28,7 +28,7 @@ function movie_services_entity_update(EntityInterface $entity): void {
 
   if ($entity instanceof NodeInterface && $entity->bundle() === 'movie') {
     $event = new CreateMovieEvent($entity);
-    \Drupal::service('event_dispatcher')->dispatch($event, 'movie_services.movie_updated');
+    \Drupal::service('event_dispatcher')->dispatch($event, CreateMovieEvent::EVENT_NAME2);
   }
 
 }

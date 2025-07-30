@@ -36,8 +36,8 @@ class CreateMovieSubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents(): array {
     return [
-      'movie_services.movie_created' => 'onMovieCreated',
-      'movie_services.movie_updated' => 'onMovieCreated',
+      CreateMovieEvent::EVENT_NAME => 'onMovieCreated',
+      CreateMovieEvent::EVENT_NAME2 => 'onMovieUpdated',
     ];
   }
 
@@ -61,6 +61,32 @@ class CreateMovieSubscriber implements EventSubscriberInterface {
     }
     else {
       $status = 'Movie "' . $node->label() . '" is exactly on budget.';
+    }
+
+    // Show message.
+    $this->msg->addStatus($status);
+  }
+
+  /**
+   * Reacts to the movie creation event.
+   *
+   * @param \Drupal\movie_services\Event\CreateMovieEvent $event
+   *   The movie created event.
+   */
+  public function onMovieUpdated(CreateMovieEvent $event): void {
+    $node = $event->getNode();
+    $budget = $this->configFactory->get('budget_form.settings')->get('budget');
+    // dd($budget);
+    $price = $node->get('field_budget')->value;
+
+    if ($price < $budget) {
+      $status = 'Movie updated."' . $node->label() . '" is under budget.';
+    }
+    elseif ($price > $budget) {
+      $status = 'Movie updated."' . $node->label() . '" is over budget.';
+    }
+    else {
+      $status = 'Movie updated."' . $node->label() . '" is exactly on budget.';
     }
 
     // Show message.

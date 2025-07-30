@@ -11,6 +11,19 @@ use Drupal\node\NodeInterface;
 class CreateMovieEvent extends Event {
 
   /**
+   * To set the event name.
+   *
+   * @var string
+   */
+  const EVENT_NAME = 'movie_services.movie_created';
+
+  /**
+   * To Update the event name.
+   *
+   * @var string
+   */
+  const EVENT_NAME2 = 'movie_services.movie_updated';
+  /**
    * The movie node.
    *
    * @var \Drupal\node\NodeInterface
