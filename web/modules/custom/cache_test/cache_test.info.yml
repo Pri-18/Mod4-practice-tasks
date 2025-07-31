@@ -1,5 +1,0 @@
-name: 'cache_test'
-type: module
-description: 'To explore the cache api in drupal'
-package: Custom
-core_version_requirement: ^10 || ^11
