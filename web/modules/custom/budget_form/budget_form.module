@@ -12,13 +12,13 @@ function budget_form_entity_view(array &$build, Drupal\Core\Entity\EntityInterfa
 
     $status = '';
     if ($price < $budget) {
-      $status = 'The movie is under budget';
+      $status = t('The movie is under budget');
     }
     elseif ($price > $budget) {
-      $status = 'The movie is over budget';
+      $status = t('The movie is over budget');
     }
     else {
-      $status = 'The movie is within budget';
+      $status = t('The movie is within budget');
     }
 
     // Display message at the top.
