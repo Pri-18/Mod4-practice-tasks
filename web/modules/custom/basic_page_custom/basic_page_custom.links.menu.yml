@@ -1,0 +1,21 @@
+basic_page_custom.basicPage:
+  title: Custom Basic Page
+  description: Basic custom page
+  route_name: basic_page_custom.basicPage
+  weight: 2
+  menu_name: main
+  options:
+    attributes:
+      target: _blank
+
+
+basic_page_custom.infoPage:
+  title: Custom Info Page
+  description: Basic custom page
+  route_name: basic_page_custom.infoPage
+  weight: 1
+  menu_name: main
+  options:
+    attributes:
+      target: _blank
+
