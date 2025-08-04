@@ -1,0 +1,31 @@
+cache_test.max_age:
+  path: '/cache-test/max-age'
+  defaults:
+    _title: 'Cache max age'
+    _controller: '\Drupal\cache_test\Controller\CacheTestController::cacheMaxAge'
+  requirements:
+    _permission: 'access content'
+
+cache_test.contexts:
+  path: '/cache-test/contexts'
+  defaults:
+    _title: 'Cache Contexts'
+    _controller: '\Drupal\cache_test\Controller\CacheTestController::cacheContexts'
+  requirements:
+    _permission: 'access content'
+
+cache_test.cacheKeys:
+  path: '/cache-test/cacheKeys'
+  defaults:
+    _title: 'Cache Keys'
+    _controller: '\Drupal\cache_test\Controller\CacheTestController::cacheKeys'
+  requirements:
+    _permission: 'access content'
+
+cache_test.cacheTags:
+  path: '/cache-test/cacheTags'
+  defaults:
+    _title: 'Cache Tags'
+    _controller: '\Drupal\cache_test\Controller\CacheTestController::cacheTags'
+  requirements:
+    _permission: 'access content'

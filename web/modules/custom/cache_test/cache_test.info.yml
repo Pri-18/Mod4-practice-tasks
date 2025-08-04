@@ -1,0 +1,5 @@
+name: 'cache_test'
+type: module
+description: 'TO explore the drupal caching.'
+package: Custom
+core_version_requirement: ^10 || ^11

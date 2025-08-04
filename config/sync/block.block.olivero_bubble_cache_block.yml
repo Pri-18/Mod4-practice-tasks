@@ -1,0 +1,20 @@
+uuid: 0bb3ecb2-aeef-49a6-81b9-3fccc71f2d5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - cache_test
+  theme:
+    - olivero
+id: olivero_bubble_cache_block
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: cache_test_bubble_cache_block
+settings:
+  id: cache_test_bubble_cache_block
+  label: bubble_cache_block
+  label_display: visible
+  provider: cache_test
+visibility: {  }
