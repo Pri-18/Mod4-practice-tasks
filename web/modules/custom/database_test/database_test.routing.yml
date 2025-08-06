@@ -1,0 +1,23 @@
+database_test.active_users:
+  path: '/active-users'
+  defaults:
+    _controller: 'Drupal\database_test\Controller\DatabaseTestController::list' 
+    _title: 'Active Users'
+  requirements:
+    _permission: 'access_content'
+
+database_test.yearly_count:
+  path: '/yearly-count'
+  defaults:
+    _controller: 'Drupal\database_test\Controller\EventController::dashboard' 
+    _title: 'Dashboard'
+  requirements:
+    _permission: 'access_content'
+
+database_test.search_term:
+  path: '/search_term'
+  defaults:
+    _form: 'Drupal\database_test\Form\SearchTaxonomyForm' 
+    _title: 'Search Taxonomy Term'
+  requirements:
+    _permission: 'access_content'

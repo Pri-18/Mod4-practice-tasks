@@ -1,0 +1,63 @@
+<style>
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .users-table th,
+  .users-table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .users-table thead {
+    background-color: #f4f4f4;
+  }
+
+  .users-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  .users-table tbody tr:hover {
+    background-color: #eef;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-style: italic;
+    color: #777;
+  }
+</style>
+
+<h2>{{ title }}</h2>
+
+{% if users is not empty %}
+  <table class="users-table">
+    <thead>
+      <tr>
+        <th>UID</th>
+        <th>Name</th>
+        <th>Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in users %}
+        <tr>
+          <td>{{ row.uid }}</td>
+          <td>{{ row.name }}</td>
+          <td>{{ row.created }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>No users found.</p>
+{% endif %}

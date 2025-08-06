@@ -1,0 +1,4 @@
+services:
+  database_test.user_service:
+    class: Drupal\database_test\Service\DbService
+    arguments: ['@database']

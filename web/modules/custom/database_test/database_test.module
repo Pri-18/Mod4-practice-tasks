@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for database_test module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function database_test_theme($existing, $type, $theme, $path) {
+  return [
+    'home' => [
+      'variables' => ['users' => NULL, 'title' => NULL],
+      'template' => 'home',
+    ],
+
+    'dashboard' => [
+      'variables' => ['yearly_count' => NULL, 'quarter_count' => NULL, 'type_count' => NULL],
+      'template' => 'dashboard',
+    ],
+  ];
+
+}
