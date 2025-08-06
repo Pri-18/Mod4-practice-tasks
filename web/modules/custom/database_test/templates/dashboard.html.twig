@@ -1,0 +1,103 @@
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 12px 2px #5d46ff;
+  }
+
+  h2 {
+    font-family: Arial, sans-serif;
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  th, td {
+    border: 1px solid #645ce8;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #6afffe;
+    color: black;
+  }
+
+  tr:nth-child(even) {
+    background-color: #fae3e8;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+</style>
+
+<h2>Yearly Event Count</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Event Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in yearly_count %}
+      <tr>
+        <td>{{ row.event_year }}</td>
+        <td>{{ row.event_count }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Quarterly Event Count</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Quarter</th>
+      <th>Event Count</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for row in quarter_count %}
+  {% if row.event_quarter == 1 %}
+    {% set quarter_month = 'January - March' %}
+  {% elseif row.event_quarter == 2 %}
+    {% set quarter_month = 'April - June' %}
+  {% elseif row.event_quarter == 3 %}
+    {% set quarter_month = 'July - September' %}
+  {% elseif row.event_quarter == 4 %}
+    {% set quarter_month = 'October - December' %}
+  {% else %}
+    {% set quarter_month = 'Unknown' %}
+  {% endif %}
+
+  <tr>
+    <td>{{ row.event_year }}</td>
+    <td>{{ quarter_month }}</td>
+    <td>{{ row.event_count }}</td>
+  </tr>
+{% endfor %}
+  </tbody>
+</table>
+
+<h2>Event Count by types</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Event type</th>
+      <th>Event Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in type_count %}
+      <tr>
+        <td>{{ row.event_name }}</td>
+        <td>{{ row.event_count }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

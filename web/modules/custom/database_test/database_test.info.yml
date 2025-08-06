@@ -1,0 +1,5 @@
+name: 'database_test'
+type: module
+description: 'To explore the database of drupal'
+package: Custom
+core_version_requirement: ^10 || ^11

@@ -10,8 +10,6 @@ dependencies:
     - field.field.node.article.field_tags
     - image.style.wide
     - node.type.article
-    - webform.webform.contact
-    - webform.webform.demo_contrib_conditional_fields
   module:
     - comment
     - image
@@ -19,7 +17,6 @@ dependencies:
     - layout_discovery
     - text
     - user
-    - webform
 third_party_settings:
   layout_builder:
     enabled: true
@@ -31,37 +28,7 @@ third_party_settings:
           label: 'main section'
           context_mapping: {  }
           column_widths: 50-50
-        components:
-          4179bf54-c8a9-43c6-945f-f0c45c17c58d:
-            uuid: 4179bf54-c8a9-43c6-945f-f0c45c17c58d
-            region: first
-            configuration:
-              id: webform_block
-              label: Webform
-              label_display: visible
-              provider: webform
-              context_mapping: {  }
-              webform_id: contact
-              default_data: ''
-              redirect: false
-              lazy: false
-            weight: 0
-            additional: {  }
-          cde0d292-9a15-428b-8581-8e42dba56de2:
-            uuid: cde0d292-9a15-428b-8581-8e42dba56de2
-            region: second
-            configuration:
-              id: webform_block
-              label: Webform
-              label_display: visible
-              provider: webform
-              context_mapping: {  }
-              webform_id: demo_contrib_conditional_fields
-              default_data: ''
-              redirect: false
-              lazy: false
-            weight: 0
-            additional: {  }
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol

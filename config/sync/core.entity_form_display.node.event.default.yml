@@ -1,27 +1,24 @@
-uuid: c0a21342-ad8b-46d4-ac60-0ab639b0cb12
+uuid: cbd6b638-76cb-4002-a058-9e95bf8b93d8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_article_ref
-    - field.field.node.page.field_basic_img
-    - image.style.thumbnail
-    - node.type.page
+    - field.field.node.event.body
+    - field.field.node.event.field_date
+    - field.field.node.event.field_type
+    - node.type.event
   module:
-    - image
+    - datetime
     - path
     - text
-_core:
-  default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
-id: node.page.default
+id: node.event.default
 targetEntityType: node
-bundle: page
+bundle: event
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
+    weight: 121
     region: content
     settings:
       rows: 9
@@ -35,23 +32,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_article_ref:
+  field_date:
+    type: datetime_default
+    weight: 122
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_type:
     type: entity_reference_autocomplete
-    weight: 124
+    weight: 123
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_basic_img:
-    type: image_image
-    weight: 123
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
   path:
     type: path
@@ -97,10 +92,5 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  url_redirects:
-    weight: 50
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden: {  }
