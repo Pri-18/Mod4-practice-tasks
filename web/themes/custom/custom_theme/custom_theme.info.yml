@@ -1,0 +1,15 @@
+name: 'My Bootstrap Theme'
+type: theme
+description: 'Custom Bootstrap 5 subtheme'
+core_version_requirement: ^10
+base theme: bootstrap5
+
+libraries:
+  - my_bootstrap_theme/global-styling
+
+regions:
+  header: Header
+  primary_menu: 'Primary Menu'
+  content: Content
+  sidebar_first: Sidebar
+  footer: Footer
