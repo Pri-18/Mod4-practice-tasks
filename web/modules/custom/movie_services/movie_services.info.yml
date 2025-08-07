@@ -1,0 +1,5 @@
+name: 'movie_services'
+type: module
+description: 'Create a service for the movie content type'
+package: Custom
+core_version_requirement: ^10 || ^11

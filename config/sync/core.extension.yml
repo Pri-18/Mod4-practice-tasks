@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   admin_toolbar: 0
   admin_toolbar_search: 0
@@ -32,6 +30,7 @@ module:
   link: 0
   menu_link_content: 0
   menu_ui: 0
+  movie_services: 0
   mysql: 0
   node: 0
   options: 0
