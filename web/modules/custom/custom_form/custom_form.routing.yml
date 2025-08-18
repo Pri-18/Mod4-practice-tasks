@@ -1,0 +1,25 @@
+custom_form.simple_form:
+  path: '/generic_form'
+  defaults:
+    _form: 'Drupal\custom_form\Form\SimpleForm'
+    _title: 'Generic Form'
+  requirements:
+    _permission: 'access content'
+
+
+custom_form.settings_form:
+  path: '/admin/config/system/custom-settings'
+  defaults:
+    _form: '\Drupal\custom_form\Form\SettingsForm'
+    _title: 'Custom Config Form'
+  requirements:
+    _permission: 'administer site configuration'
+
+custom_form.ajax_form:
+  path: '/ajaxForm'
+  defaults:
+    _form: '\Drupal\custom_form\Form\AjaxForm'
+    _title: 'Custom Ajax Form'
+  requirements:
+    _permission: 'administer site configuration'
+

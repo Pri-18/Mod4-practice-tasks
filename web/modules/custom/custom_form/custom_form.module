@@ -1,0 +1,18 @@
+<?php
+
+  /**
+   * Implemented hook_form-FORM_ID_alter().
+   * @param mixed $form
+   * @param Drupal\Core\Form\FormStateInterface $form_state
+   * @param mixed $form_id
+   * 
+   * @return void
+   */
+  function custom_form_form_custom_simple_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+        // Add a checkbox to the login form.
+        $form['custom_checkbox'] = [
+            '#type' => 'checkbox',
+            '#title' => t('Remember me'),
+            '#default_value' => 0,
+        ];
+   }
