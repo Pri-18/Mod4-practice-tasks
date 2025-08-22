@@ -1,0 +1,13 @@
+{% extends "node.html.twig" %}
+{% block submitted %}
+    {% if display_submitted %}
+    <div class="node__meta submitted">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        I am Overridden.
+        {{ metadata }}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

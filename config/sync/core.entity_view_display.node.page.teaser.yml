@@ -5,10 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
-    - field.field.node.page.field_article_ref
     - field.field.node.page.field_basic_img
     - node.type.page
   module:
+    - image
     - text
     - user
 _core:
@@ -24,11 +24,22 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 100
+    weight: 0
+    region: content
+  field_basic_img:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
-    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
-hidden:
-  field_article_ref: true
-  field_basic_img: true
+hidden: {  }

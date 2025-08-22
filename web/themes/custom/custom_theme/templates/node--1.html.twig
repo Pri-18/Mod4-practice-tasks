@@ -1,0 +1,37 @@
+{# <!DOCTYPE html>
+<html>
+<head>
+  <head-placeholder token="{{ placeholder_token }}">
+  <title>{{ head_title|safe_join(' | ') }}</title>
+  <css-placeholder token="{{ placeholder_token }}">
+  <js-placeholder token="{{ placeholder_token }}">
+</head>
+<body> #}
+  <main class="container my-4">
+    
+    <div class="breadcrumb-wrapper">
+      {{ breadcrumb }}
+    </div>
+
+    <div class="content-wrapper m-4">
+      {{ sidebar_first }}
+      <div class="content"> {{ content }} </div>
+      {{ sidebar_second }}
+    </div>    
+
+    <div class="container">
+      {{ extra_content }}
+    </div>
+
+    <div class="container content-wrapper m-4">
+      {{ card_1 }}
+      {{ card_2 }}
+      {{ card_3 }}
+      {{ card_4 }}
+    </div>
+
+  </main>
+
+  <js-bottom-placeholder token="{{ placeholder_token }}">
+{# </body>
+</html> #}

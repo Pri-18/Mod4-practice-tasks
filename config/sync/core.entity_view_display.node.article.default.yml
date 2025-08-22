@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
-    - field.field.node.article.field_tags
     - image.style.wide
     - node.type.article
   module:
@@ -68,22 +67,6 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             weight: 1
-            additional: {  }
-          9d00a47c-ac78-4ce7-a1df-1fb09c9edb48:
-            uuid: 9d00a47c-ac78-4ce7-a1df-1fb09c9edb48
-            region: content
-            configuration:
-              id: 'field_block:node:article:field_tags'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 2
             additional: {  }
           661a114d-4877-4171-8016-d37ee1d5e4cd:
             uuid: 661a114d-4877-4171-8016-d37ee1d5e4cd
@@ -146,14 +129,6 @@ content:
         attribute: eager
     third_party_settings: {  }
     weight: -1
-    region: content
-  field_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 10
     region: content
   links:
     settings: {  }

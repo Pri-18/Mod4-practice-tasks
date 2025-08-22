@@ -1,0 +1,43 @@
+<header>
+  <div class="header-wrapper">
+    {{ page.header }}
+
+    <div class="menu-wrapper">
+    {{ page.primary_menu }}
+    {{ page.secondary_menu }}
+    </div>
+  </div>
+</header>
+
+<main class="container my-4">
+  <div class="breadcrumb-wrapper">
+    {{ page.breadcrumb }}
+  </div>
+
+  <div class="content-wrapper m-4">
+    {{ page.sidebar_first }}
+    {{ page.content }}
+    {{ page.sidebar_second }}
+  </div>
+
+  <div class="container">
+    {{ page.extra_content }}
+    {% block main %} {% endblock %}
+  </div>
+
+  <div class="container content-wrapper m-4">
+    {{ page.card_1 }}
+    {{ page.card_2 }}
+    {{ page.card_3 }}
+    {{ page.card_4 }}
+  </div>
+  <div class="container text-center">
+    <a href={{ url("<front>") }}>visit Homepage</a> 
+  </div>
+</main>
+
+<footer>
+  {{ page.footer }}
+</footer>
+
+<js-bottom-placeholder token="{{ placeholder_token }}"> </js-bottom-placeholder>

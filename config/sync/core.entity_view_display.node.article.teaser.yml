@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
-    - field.field.node.article.field_tags
     - node.type.article
   module:
     - text
@@ -26,14 +25,6 @@ content:
       trim_length: 600
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 10
     region: content
   links:
     settings: {  }
