@@ -1,0 +1,9 @@
+uuid: 5269b942-8fc3-41d2-8271-1642e13ff9af
+langcode: en
+status: true
+dependencies: {  }
+name: League
+vid: team
+description: 'League terms'
+weight: 0
+new_revision: false

@@ -1,0 +1,50 @@
+uuid: 5d73b6b8-a460-42c4-93fb-7035550f73e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.players.body
+    - field.field.node.players.field_player_image
+    - field.field.node.players.field_team
+    - node.type.players
+  module:
+    - image
+    - text
+    - user
+id: node.players.default
+targetEntityType: node
+bundle: players
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_player_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_team:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

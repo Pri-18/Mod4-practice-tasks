@@ -1,0 +1,6 @@
+name: 'Custom View'
+type: module
+description: 'To alter the  view queries'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+version: 1.0
