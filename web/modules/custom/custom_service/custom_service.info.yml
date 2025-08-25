@@ -1,0 +1,6 @@
+name: custom_service
+description: To practice the custom service
+type: module
+package: Custom
+version: 10.x
+core_version_requirement: ^10.3 || ^11
